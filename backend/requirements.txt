@@ -1,0 +1,10 @@
+ast-nodes
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+celery
+redis
+pydantic
+pydantic-settings
+email-validator
