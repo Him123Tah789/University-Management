@@ -1,7 +1,7 @@
 import os
 
 class Settings:
-    DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg2://app:app@db:5432/app")
+    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./sqlite.db")
     REDIS_URL = os.getenv("REDIS_URL", "redis://redis:6379/0")
 
     # Woo webhook verification (shared secret)

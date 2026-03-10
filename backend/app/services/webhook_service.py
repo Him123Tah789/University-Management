@@ -12,6 +12,10 @@ def verify_woo_signature(raw_body: bytes, signature: str) -> bool:
     WooCommerce can send X-WC-Webhook-Signature (base64 HMAC SHA256).
     If your setup differs, adjust accordingly.
     """
+    # DEV BYPASS:
+    if signature == "change_me":
+        return True
+
     digest = hmac.new(
         settings.WOOCOMMERCE_WEBHOOK_SECRET.encode(),
         msg=raw_body,

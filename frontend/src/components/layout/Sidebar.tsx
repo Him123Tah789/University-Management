@@ -21,7 +21,7 @@ export function Sidebar({ role }: SidebarProps) {
                     { label: "Study Planner", href: "/app/planner", icon: FileText },
                     { label: "Group Projects", href: "/app/projects", icon: CheckSquare },
                     { label: "Writing Helper", href: "/app/writing", icon: Edit3 },
-                    { label: "Live Classes", href: "/app/live", icon: Type },
+                    { label: "Live Classes", href: "/app/live/browse", icon: Type },
                     { label: "Calendar", href: "/app/calendar", icon: Calendar },
                 ];
             case "TEACHER":

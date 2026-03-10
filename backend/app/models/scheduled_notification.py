@@ -1,5 +1,4 @@
-from sqlalchemy import Column, BigInteger, Text, Integer, TIMESTAMP
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Column, BigInteger, Text, Integer, TIMESTAMP, JSON
 from sqlalchemy.sql import func
 from app.core.db import Base
 
@@ -11,7 +10,7 @@ class ScheduledNotification(Base):
 
     channel = Column(Text, nullable=False)        # email/whatsapp/inapp
     template_key = Column(Text, nullable=False)   # order_confirm, zoom_link, class_reminder...
-    payload_json = Column(JSONB, nullable=False)
+    payload_json = Column(JSON, nullable=False)
 
     send_at = Column(TIMESTAMP(timezone=True), nullable=False)
     status = Column(Text, nullable=False, default="PENDING")  # PENDING|LOCKED|SENT|FAILED|CANCELLED

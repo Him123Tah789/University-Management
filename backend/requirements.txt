@@ -1,4 +1,3 @@
-ast-nodes
 fastapi
 uvicorn[standard]
 sqlalchemy
@@ -8,3 +7,4 @@ redis
 pydantic
 pydantic-settings
 email-validator
+python-multipart
